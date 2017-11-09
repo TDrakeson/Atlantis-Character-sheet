@@ -3,9 +3,9 @@
 <div class="sheet-primary-info-col-left">
 	<!-- ===== Primary Info ===== -->
 	<div class="sheet-header">
-		<div class=section-name">PRIMARY INFO</div>
+		<div class="section-name">PRIMARY INFO</div>
 	<div>
-	<div class="sheet-section-name-primary-info>
+	<div class="sheet-section-name-primary-info">
 		<input type="text" name="attr_charactername" placeholder="Character">
 		<input type="text" name="attr_level" placeholder="Level">
 		<input type="text" name="attr_race" placeholder="Race">
@@ -16,9 +16,9 @@
 <div class="sheet-primary-info-col-left">
 <!-- ===== Secondary Info ===== -->
 	<div class="sheet-header">
-		<div class=section-name">SECONDARY INFO</div>
+		<div class="section-name">SECONDARY INFO</div>
 	<div>
-	<div class="sheet-section-name-secondary-info>
+	<div class="sheet-section-name-secondary-info">
 		<input type="text" name="attr_XP" placeholder="XP">
 		<input type="text" name="attr_XP Pool" placeholder="XP Pool">
 		<input type="text" name="attr_Combat Training"  placeholder="Combat Training">
@@ -30,10 +30,16 @@
 		<div>
 <div>
 
-
+  
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
                                                          
-
-<table style="width:100%">
+<table style="width:50%">
   <tr>
     <th>Attribute</th>
     <th>Score</th> 
@@ -58,7 +64,6 @@
     <td><button type='roll' value='/roll 1d20 + @{SPDSave}' name='roll_SPDSave'></button></td>
     <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
   </tr>
-  <td>
   <tr>
     <td>Dexterity</td>
     <td><input type="number" class="sheet-Attribute" name="attr_Dexterity"></td> 
@@ -105,7 +110,6 @@
     <td><input type="number" class="sheet-Attribute" name="attr_Modifier"></td>
     <td><input type="number" class="sheet-Attribute" name="attr_PERSave"></td>
     <td><button type='roll' value='/roll 1d20 + @{PERSave}' name='roll_PERSave'></button></td>
-    <td><input type="text" class="sheet-Attribute" name="attr_Bonus"/><td>
+    <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
   </tr>
 </table>
-
