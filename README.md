@@ -3,20 +3,20 @@
 <div class="sheet-primary-info-col-left">
 	<!-- ===== Primary Info ===== -->
 	<div class="sheet-header">
-		<div class=section-name">Primary info</div>
+		<div class=section-name">PRIMARY INFO</div>
 	<div>
 	<div class="sheet-section-name-primary-info>
-		<input type="text" name="attr_character name" placeholder="Name">
+		<input type="text" name="attr_charactername" placeholder="Character">
 		<input type="text" name="attr_level" placeholder="Level">
-		<input type="text" name=attr_race" placeholder="Race">
-		<input type="text" name=attr_profession" placeholder="Profession">
+		<input type="text" name="attr_race" placeholder="Race">
+		<input type="text" name="attr_profession" placeholder="Profession">
 		</div>
 </div>    
   
-<div class="sheet-primary-info-col-right">
+<div class="sheet-primary-info-col-left">
 <!-- ===== Secondary Info ===== -->
 	<div class="sheet-header">
-		<div class=section-name">Secondary info</div>
+		<div class=section-name">SECONDARY INFO</div>
 	<div>
 	<div class="sheet-section-name-secondary-info>
 		<input type="text" name="attr_XP" placeholder="XP">
@@ -33,7 +33,7 @@
 
                                                          
 
-<table style="width:100%">
+<table style="width:50%">
   <tr>
     <th>Attribute</th>
     <th>Score</th> 
@@ -43,12 +43,12 @@
     <th>Bonus</th>
   </tr>
   <tr>
-    <td><input type="text"class="sheet-Attribute" name="attr_Strength"/><td>
-    <td><input type="number" class="sheet-Attribute" name="attr_Strength"/><td> 
-    <td><input type="number" class="sheet-Attribute" name="Modifier"/><td>
-    <td><input type="number" class="sheet-Attribute" name="STRSave"/><td>
+    <td><input type="text"class="sheet-Attribute" name="attr_Strength" placeholder=Strength /><td>
+    <td><input type="number" class="sheet-Attribute" name="attr_Strength" placeholder=Score /><td> 
+    <td><input type="number" class="sheet-Attribute" name="Modifier" placeholder=Modifier /><td>
+    <td><input type="number" class="sheet-Attribute" name="STRSave" placeholder=STRSave /><td>
     <td><button type='roll' value='/roll 1d20 + @{STRSave}' name='roll_STRSave'></button><td>
-    <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
+    <td><input type="text" class="sheet-Attribute" name="attr_Bonus" placeholder=Bonus /<td>
   </tr>
   <tr>
     <td><input type="text"class="sheet-Attribute" name="attr_Speed"/><td>
@@ -71,7 +71,7 @@
     <td><input type="number" class="sheet-Attribute" name="attr_Constitution"/><td> 
     <td><input type="number" class="sheet-Attribute" name="attr_Modifier"/><td>
     <td><input type="number" class="sheet-Attribute" name="attr_CONSave"/><td>
-    <td><button type='roll' value='/roll 1d20 + @{CONSave}' name='roll_CONSave'></button>
+    <td><button type='roll' value='/roll 1d20 + @{CONSave}' name='roll_CONSave'></button><td>
     <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
   </tr>
   <tr>
