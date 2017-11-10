@@ -5,24 +5,35 @@
 	<div class="sheet-header">
 		<div class="section-name">PRIMARY INFO</div>
 	<div>
+    <br>
 	<div class="sheet-section-name-primary-info">
+    Name
 		<input type="text" name="attr_charactername" placeholder="Character">
-		<input type="text" name="attr_level" placeholder="Level">
+		Level
+    <input type="text" name="attr_level" placeholder="Level">
+    </div>
+</div>
+    Race
 		<input type="text" name="attr_race" placeholder="Race">
-		<input type="text" name="attr_profession" placeholder="Profession">
+		Profession
+    <input type="text" name="attr_profession" placeholder="Profession">
 		</div>
-</div>    
+</div>  
+<br>
   
 <div class="sheet-primary-info-col-left">
 <!-- ===== Secondary Info ===== -->
 	<div class="sheet-header">
 		<div class="section-name">SECONDARY INFO</div>
 	<div>
+    <br>
 	<div class="sheet-section-name-secondary-info">
 		<input type="text" name="attr_XP" placeholder="XP">
 		<input type="text" name="attr_XP Pool" placeholder="XP Pool">
 		<input type="text" name="attr_Combat Training"  placeholder="Combat Training">
 		<input type="text" name="attr_Alignment" placeholder="Alignment">
+    </div>
+</div>
 		<input type="text" name="attr_Birthplace" placeholder="Birthplace">	
 		<input type="text" name="attr_Background" placeholder="Background">
 		<input type="text" name="attr_Racial or Special ablilities" placeholder="Racial or Special abilities">
@@ -34,7 +45,7 @@
   
 <!-- ===== ATTRIBUTES ===== -->  
   <div class="sheet-header">
-		<div class="section-name">ATTRIBUTES</div>
+		<div class="section-name-attributes">ATTRIBUTES</div>
 	<div>
   
 <style>
@@ -125,168 +136,96 @@ table, th, td {
   
   <!-- ===== SKILLS ===== -->  
   <div class="sheet-header">
-		<div class="section-name">SKILLS</div>
+		<div class="section-name-skills">SKILLS</div>
 	<div>
 
-    <style>
-table, th, td {
-    border: 1px solid black;
-}
-</style>
-</head>
-<body>
+    
+  <h3>Skills</h3>
+<fieldset class="repeating_skills">
+     <input type="text" name="attr_skillname" />
+	   <select name="attr_skillname" class="skillname">                
+          <option value="Analyze Mixture">Analyze Mixture</option>
+		      <option value="Ancient Lore">Ancient Lore</option>
+          <option value="Art">Art</option>
+          <option value="Cartography">Cartography</option>
+          <option value="Chirrography">Chirrography</option>
+          <option value="Diplomacy">Diplomacy</option>
+          <option value="Healing Arts">Healing Arts</option>
+          <option value="Horticulture">Horticulture</option>
+          <option value="Internal Alchemy">Internal Alchemy</option>
+          <option value="Inventing">Inventing</option>
+          <option value="Linguistics">Linguistics</option>
+          <option value="Music">Music</option>
+          <option value="Navigation">Navigation</option>
+          <option value="Naturalism">Naturalism</option>
+          <option value="Read Magic">Read Magic</option>
+          <option value="Theology">Theology</option>
+          <option value="AppraiseTreasure">AppraiseTreasure</option>
+          <option value="Catwalk">Catwalk</option>
+          <option value="Con">Con</option>
+          <option value="Decipher">Decipher</option>
+          <option value="Detect Set Disarm Traps">Detect Set Disarm Traps</option>
+          <option value="Evade Pursuit">Evade Pursuit</option>
+          <option value="Forgery">Forgery</option>
+          <option value="Hide">Hide</option>
+          <option value="Infiltrate">Infiltrate</option>
+          <option value="Interrogate">Interrogate</option>
+          <option value="Lipreading">Lipreading</option>
+          <option value="Pick Pockets">Pick Pockets</option>
+          <option value="Scale Walls">Scale Walls</option>
+          <option value="Stealth">Stealth</option>
+          <option value="Tailing">Tailing</option>
+          <option value="Thieves' Cant">Thieves' Cant</option>
+          <option value="Camoflague-Ambush">Camoflague-Ambush</option>
+          <option value="Detect Disarm Set Snares ">Detect Disarm Set Snares</option>
+          <option value="Herb Lore">Herb Lore</option>
+          <option value="Hunting-Fishing-Trapping">Hunting-Fishing-Trapping</option>
+          <option value="Mountain Climbing">Mountain Climbing</option>
+          <option value="Read Tracks">Read tracks</option>
+          <option value="Stalking">Stalking</option>
+          <option value="tracking">Tracking</option>
+          <option value="Woodcraft">Woodcraft</option>
+          <option value="Acrobatics 1">Acrobatics 1</option>
+          <option value="Acrobatics 2">Acrobatics 2</option>
+          <option value="Tightrope Walking">Tightrope Walking</option>
+          <option value="Team Acrobatics">Team Acrobatics</option>
+          <option value="Acting">Acting</option>
+          <option value="Animal Training">Animal Training</option>
+          <option value="Juggling">Juggling</option>
+          <option value="Knife Throwing">Knife Throwing</option>
+          <option value="Legermain">Legermain</option>
+          <option value="Oratory">Oratory</option>
+          <option value="Sideshow Talents">Sideshow Talents</option>
+          <option value="Archery 1">Archery 1</option>
+          <option value="Archery 2">Archery 2</option>
+          <option value="Boxing">Boxing</option>
+          <option value="Command">Command</option>
+          <option value="Martial Arts 1">Martial Arts 1</option>
+          <option value="Martial Arts 2">Martial Arts 2</option>
+          <option value="Mounted Combat 1">Mounted Combat 1</option>
+          <option value="Mounted Combat" 2>Mounted Combat 2</option>
+          <option value="Siege Weapons">Siege Weapons</option>
+          <option value="Street Fighting">Street Fighting</option>
+          <option value="Weapon Specialization">Weapon Specialization</option>
+          <option value="Weapon Training">Weapon Training</option>
+          <option value="Wrestling">Wrestling</option>
+          <option value="Zen Archery">Zen Archery</option>
+          <option value=""></option>
+      
+     </select>
+     <input type="number" name="attr_skillscore" /> 
+     <select name="attr_skilltype" class="skilltype">                
+          <option value="A&S">A&S</option>
+          <option value="Background">Background</option>
+          <option value="Combat">Combat</option>
+          <option value="Performing">Performing</option>       
+          <option value="Thieving">Thieving</option>
+          <option value="Woodlore">Woodlore</option>
+      </select>
+      <input type="number" name="attr_increaseperlevel" /> 
+      <input type="text" name="attr_notes" />
+      <input type="checkbox" class="sheet-toggle" title="show/hide" name="attr_move-show" value="1" />
+			<textarea name="attr_descriptionbody" class="sheet-hide" placeholder="Skill Description"></textarea> 
+</fieldset>
   
-  <br>
-  
-  <table style="width:50%">
-  <tr>
-    <th>Skill</th>
-    <th>Score</th> 
-    <th>Type</th>
-    <th>Increase/level</th>
-    <th>Notes</th>
-     </tr>
-  <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-      <tr>
-    <td><input type="text" class="sheet-skills" name="attr_skillname" placeholder=Skill></td>
-    <td><input type="number" class="sheet-Skills" name="attr_score" placeholder=Score ></td> 
-    <td><input type="text" class="sheet-Skills" name="attr_type" placeholder=Type ></td>
-    <td><input type="number" class="sheet-Skills" name="increaselevel" placeholder=0 ></td>
-    <td><input type="text" class="sheet-Skills" name="attr_notes" placeholder=Notes </td>
-  </tr>
-<table>
-  
-  <br>
   
