@@ -1,63 +1,118 @@
-# Atlantis-Character-sheet
 
-<div class="sheet-primary-info-col-left">
+<div class="sheet-col-right">
+  
+  <div class="sheet-header">
+		<div class="section-name">COMBAT</div>
+    <label> to hit</label>
+      
+      <input type="number" name="attr_tohitbonus" placeholder="Total to hit bonuses"/>
+      <input type="number" name="attr_dmgbonus" placeholder="Total damage bonuses" />
+      <input type="number" name="attr_numberattacks" placeholder="Number of attacks"/>
+  
+    <div class="sheet-header">
+      <div class="section-name">WEAPON PROFICIENCIES</div>
+    </div>
+        
+      <fieldset class="weaponproficiencies">
+        <input type="text" name="attr_weaponprof" placeholder="Weapon" />
+        <input type="text" name="weapondamage" placeholder="Damage"/>
+        <input type="text" name="Notes" placeholder=Notes />
+    </fieldset>
+    
+    <div class="sheet-header">
+    <div class="section-name">ARMOR</div>
+      </div>
+       
+    <fieldset class="repeating_armor">
+       <input type="text" name="attr_armor" placeholder="Armor"/>
+       <input type="number" name="attr_protectivevalue" placeholder= "Protective Value"/>
+       <input type="number" name="attr_weight" placeholder= "Weight"/>
+  </fieldset>
+    
+     <div class="sheet-header">  
+     <div class="section-name">GEAR</div>
+        </div>
+    <fieldset class="repeating_gear">
+      <input type="text" name="attr_gear" placeholder= "Gear"/>
+      <input type="number" name="attr_weight" placeholder= "Weight"/>
+   </fieldset>
+    
+     <div class="sheet-header">  
+     <div class="section-name">Magic Items</div>
+        </div>
+    
+    <fieldset class="repeating_magicitem">
+      <input type="text" name="attr_magicitem" placeholder= "Magic Item"/>
+      <input type="number" name="attr_weight" placeholder= "Weight"/>
+   </fieldset>
+    
+
+    </div>
+ </div>
+
+<div class="sheet-col-left">
+
 	<!-- ===== Primary Info ===== -->
 	<div class="sheet-header">
 		<div class="section-name">PRIMARY INFO</div>
 	<div>
     <br>
-	<div class="sheet-section-name-primary-info">
-    Name
-		<input type="text" name="attr_charactername" placeholder="Character">
-		Level
-    <input type="text" name="attr_level" placeholder="Level">
-    </div>
-</div>
-    Race
+    
+    <div class="sheet-section-primary-info">
+		    <input type="text" name="attr_charactername" placeholder="Character">  
+        <input type="text" name="attr_level" placeholder="Level">
+    <div/>
+  </div>
 		<input type="text" name="attr_race" placeholder="Race">
-		Profession
     <input type="text" name="attr_profession" placeholder="Profession">
-		</div>
-</div>  
-<br>
-  
-<div class="sheet-primary-info-col-left">
-<!-- ===== Secondary Info ===== -->
+		
+  </div>  
+ 
+  <br>
+
+
+ <!-- ===== Secondary Info ===== -->
 	<div class="sheet-header">
 		<div class="section-name">SECONDARY INFO</div>
 	<div>
     <br>
-	<div class="sheet-section-name-secondary-info">
+	<div class="sheet-section-secondary-info">
 		<input type="text" name="attr_XP" placeholder="XP">
 		<input type="text" name="attr_XP Pool" placeholder="XP Pool">
 		<input type="text" name="attr_Combat Training"  placeholder="Combat Training">
 		<input type="text" name="attr_Alignment" placeholder="Alignment">
     </div>
-</div>
+  <div>
 		<input type="text" name="attr_Birthplace" placeholder="Birthplace">	
 		<input type="text" name="attr_Background" placeholder="Background">
 		<input type="text" name="attr_Racial or Special ablilities" placeholder="Racial or Special abilities">
 		<input type="text" name="attr_Renown" placeholder="Renown">
 		<div>
-<div>
+  <div>
 
   <br>
+
   
-<!-- ===== ATTRIBUTES ===== -->  
+ <!-- ===== ATTRIBUTES ===== -->  
   <div class="sheet-header">
-		<div class="section-name-attributes">ATTRIBUTES</div>
-	<div>
+		<div class=section-name>ATTRIBUTES</div>
+	</div>
   
-<style>
+ <style>
+   
 table, th, td {
-    border: 1px solid black;
-}
-</style>
-</head>
-<body>
+    border: 2px solid black;
+    font-weight: bold;
+   }
+   
+
+ </style>
+ </head>
+ <body>
+   
   
                                                          
-<table style="width:50%">
+ <table style="width:50%">
   <tr>
     <th>Attribute</th>
     <th>Score</th> 
@@ -130,25 +185,24 @@ table, th, td {
     <td><button type='roll' value='/roll 1d20 + @{PERSave}' name='roll_PERSave'></button></td>
     <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
   </tr>
-</table>
+ </table>
   
   <br>
   
-  <!-- ===== SKILLS ===== -->  
-  <div class="sheet-header">
-		<div class="section-name-skills">SKILLS</div>
+ <!-- ===== Skills ===== -->
+	<div class="sheet-header">
+		<div class="section-name">SKILLS</div>
 	<div>
-
-    
-  <h3>Skills</h3>
-<fieldset class="repeating_skills">
-     <input type="text" name="attr_skillname" />
+    <br>  
+  
+ <fieldset class="repeating_skills">
+     
 	   <select name="attr_skillname" class="skillname">                
           <option value="Analyze Mixture">Analyze Mixture</option>
 		      <option value="Ancient Lore">Ancient Lore</option>
           <option value="Art">Art</option>
           <option value="Cartography">Cartography</option>
-          <option value="Chirrography">Chirrography</option>
+          <option value="Chirrography">Chirography</option>
           <option value="Diplomacy">Diplomacy</option>
           <option value="Healing Arts">Healing Arts</option>
           <option value="Horticulture">Horticulture</option>
@@ -215,17 +269,55 @@ table, th, td {
      </select>
      <input type="number" name="attr_skillscore" /> 
      <select name="attr_skilltype" class="skilltype">                
-          <option value="Art and Sciences">Art and Sciences</option>
+          <option value="Arts and Sciences">Arts and Sciences</option>
           <option value="Background">Background</option>
           <option value="Combat">Combat</option>
           <option value="Performing">Performing</option>       
           <option value="Thieving">Thieving</option>
-          <option value="Woodlore">Woodlore</option>
+          <option value="Class">Class</option>
+       
       </select>
       <input type="number" name="attr_increaseperlevel" /> 
       <input type="text" name="attr_notes" />
       <input type="checkbox" class="sheet-toggle" title="show/hide" name="attr_move-show" value="1" />
 			<textarea name="attr_descriptionbody" class="sheet-hide" placeholder="Skill Description"></textarea> 
-</fieldset>
-  
-  
+ </fieldset>
+    
+    
+    <br>
+ <!-- ===== Spells ===== -->
+	<div class="sheet-header">
+		<div class="section-name">Spells</div>
+	<div>
+    <br>   
+
+    
+  <fieldset class="repeating_spells">
+       <input type="text" name="attr_spellname" placeholder="Spell"/>
+       <input type="number" name="attr_levelname"placeholder="level" />
+       <input type="text" name="attr_range" placeholder="range"/>
+       <input type="text" name="attr_duration" placeholder="duration"/>
+  </select>
+     <select spellsavename="attr_spellsave" class="spellsave">                
+          <option value="NONE">NONE</option>
+          <option value="WIL">DEX</option>
+          <option value="NONE">NONE</option>
+          <option value="CON">CON</option>       
+          <option value="SPECIAL">SPECIAL</option>
+          <option value="INT">INT</option>
+          <option value="STR">STR</option>
+          <option value=""></option>       
+      </select>
+    
+       <input type="text" name="attr_notes"placeholder="Notes" />
+       <input type="checkbox" class="sheet-toggle" title="show/hide" name="attr_move-show" value="1" />
+			 <textarea name="attr_spelldescriptionbody" class="sheet-hide" placeholder="Spell Description"></textarea>
+    
+ </fieldset>
+    
+    </div>
+</div>
+    
+    
+ <br>   
+    
