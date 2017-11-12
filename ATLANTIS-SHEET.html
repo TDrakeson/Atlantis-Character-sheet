@@ -3,20 +3,24 @@
   
   <div class="sheet-header">
 		<div class="section-name">COMBAT</div>
-    <label> to hit</label>
-      
-      <input type="number" name="attr_tohitbonus" placeholder="Total to hit bonuses"/>
-      <input type="number" name="attr_dmgbonus" placeholder="Total damage bonuses" />
-      <input type="number" name="attr_numberattacks" placeholder="Number of attacks"/>
+    <label>Total to hit bonus</label>
+    <input type="number" name="attr_tohitbonus" />
+    <label>Total damage bonus</label> 
+    <input type="number" name="attr_dmgbonus" />
+    <label>Number of attacks</label>  
+    <input type="number" name="attr_numberattacks" />
   
     <div class="sheet-header">
       <div class="section-name">WEAPON PROFICIENCIES</div>
     </div>
         
-      <fieldset class="weaponproficiencies">
-        <input type="text" name="attr_weaponprof" placeholder="Weapon" />
-        <input type="text" name="weapondamage" placeholder="Damage"/>
-        <input type="text" name="Notes" placeholder=Notes />
+      <fieldset class="repeating_weaponproficiencies">
+        <label>Weapon</label>
+        <input type="text" name="attr_weaponprof"  />
+        <label>Damage</label>
+        <input type="text" name="weapondamage" />
+        <label>Notes</label>
+        <input type="text" name="Notes"  />
     </fieldset>
     
     <div class="sheet-header">
@@ -24,16 +28,23 @@
       </div>
        
     <fieldset class="repeating_armor">
-       <input type="text" name="attr_armor" placeholder="Armor"/>
-       <input type="number" name="attr_protectivevalue" placeholder= "Protective Value"/>
-       <input type="number" name="attr_weight" placeholder= "Weight"/>
+      <label>Armor</label> 
+      <input type="text" name="attr_armor" />
+      <label>Protection Value</label> 
+      <input type="number" name="attr_protectivevalue" />
+      <label>Weight</label> 
+      <input type="number" name="attr_weight" placeholder= />
   </fieldset>
     
      <div class="sheet-header">  
-     <div class="section-name">GEAR</div>
+    
+       <div class="section-name">GEAR</div>
         </div>
     <fieldset class="repeating_gear">
-      <input type="text" name="attr_gear" placeholder= "Gear"/>
+      <label>Gear</label>
+      <input type="text" name="attr_gear" 
+             />
+      <label>Weight</label>
       <input type="number" name="attr_weight" placeholder= "Weight"/>
    </fieldset>
     
@@ -42,7 +53,9 @@
         </div>
     
     <fieldset class="repeating_magicitem">
-      <input type="text" name="attr_magicitem" placeholder= "Magic Item"/>
+      <label>Magic Item</label>
+      <input type="text" name="attr_magicitem" />
+      <label>Weight</label>
       <input type="number" name="attr_weight" placeholder= "Weight"/>
    </fieldset>
     
@@ -58,13 +71,17 @@
 	<div>
     <br>
     
-    <div class="sheet-section-primary-info">
-		    <input type="text" name="attr_charactername" placeholder="Character">  
-        <input type="text" name="attr_level" placeholder="Level">
+    <div class="sheet_primaryinfo">
+        <label>NAME<label/>
+		    <input type="text" name="attr_charactername" > 
+        <label>LEVEL<label/>
+        <input type="text" name="attr_level" >
     <div/>
   </div>
-		<input type="text" name="attr_race" placeholder="Race">
-    <input type="text" name="attr_profession" placeholder="Profession">
+          <label>Race</label>		
+          <input type="text" name="attr_race" >
+          <label>Profession</label>
+          <input type="text" name="attr_profession" >
 		
   </div>  
  
@@ -76,17 +93,29 @@
 		<div class="section-name">SECONDARY INFO</div>
 	<div>
     <br>
-	<div class="sheet-section-secondary-info">
-		<input type="text" name="attr_XP" placeholder="XP">
-		<input type="text" name="attr_XP Pool" placeholder="XP Pool">
-		<input type="text" name="attr_Combat Training"  placeholder="Combat Training">
-		<input type="text" name="attr_Alignment" placeholder="Alignment">
+	<div class="sheet_secondaryinfo">
+    <label>XP</label>
+		<input type="number" name="attr_XP">
+		<label>XP Pool</label>
+    <input type="number" name="attr_XP Pool" >
+		<label>Combat Training</label>
+    <input type="text" name="attr_Combat Training" >
     </div>
+  <div>		
+    <label>Alignment</label>
+    <input type="text" name="attr_Alignment" >
+		<label>Birthplace</label>
+    <input type="text" name="attr_Birthplace" >	
+    </div>
+   <div>		
+    <label>Background</label>
+    <input type="text" name="attr_Background" >
+		<label>Racial/Special Abilities</label>
+    <input type="text" name="attr_Racial or Special ablilities" >
+	 </div>
   <div>
-		<input type="text" name="attr_Birthplace" placeholder="Birthplace">	
-		<input type="text" name="attr_Background" placeholder="Background">
-		<input type="text" name="attr_Racial or Special ablilities" placeholder="Racial or Special abilities">
-		<input type="text" name="attr_Renown" placeholder="Renown">
+    <label>Renown</label>
+    <input type="number" name="attr_Renown" >
 		<div>
   <div>
 
@@ -105,6 +134,10 @@ table, th, td {
     font-weight: bold;
    }
    
+th, td {
+    background-color: #ffffff;
+    color: black;
+}
 
  </style>
  </head>
@@ -123,16 +156,16 @@ table, th, td {
   </tr>
   <tr>
     <td>Strength</td>
-    <td><input type="number" class="sheet-Attribute" name="attr_Strength" placeholder=Score ></td> 
-    <td><input type="number" class="sheet-Attribute" name="Modifier" placeholder=Modifier ></td>
-    <td><input type="number" class="sheet-Attribute" name="STRSave" placeholder=STRSave ></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_Strength" ></td> 
+    <td><input type="number" class="sheet-Attribute" name="STRModifier" ></td>
+    <td><input type="number" class="sheet-Attribute" name="STRSave" ></td>
     <td><button type='roll' value='/roll 1d20 + @{STRSave}' name='roll_STRSave'></button></td>
-    <td><input type="text" class="sheet-Attribute" name="attr_Bonus" placeholder=Bonus </td>
+    <td><input type="text" class="sheet-Attribute" name="attr_Bonus" </td>
   </tr>
   <tr>
     <td>Speed</td>
     <td><input type="number" class="sheet-Attribute" name="attr_Speed"></td> 
-    <td><input type="number" class="sheet-Attribute" name="attr_Modifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_SPDModifier"></td>
     <td><input type="number" class="sheet-Attribute" name="attr_SPDSave"></td>
     <td><button type='roll' value='/roll 1d20 + @{SPDSave}' name='roll_SPDSave'></button></td>
     <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
@@ -140,7 +173,7 @@ table, th, td {
   <tr>
     <td>Dexterity</td>
     <td><input type="number" class="sheet-Attribute" name="attr_Dexterity"></td> 
-    <td><input type="number" class="sheet-Attribute" name="attr_Modifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_DEXModifier"></td>
     <td><input type="number" class="sheet-Attribute" name="attr_DEXSave"></td>
     <td><button type='roll' value='/roll 1d20 + @{DEXSave}' name='roll_DEXSave'></button></td>
     <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
@@ -148,7 +181,7 @@ table, th, td {
   <tr>
     <td>Constitution</td>
     <td><input type="number" class="sheet-Attribute" name="attr_Constitution"></td> 
-    <td><input type="number" class="sheet-Attribute" name="attr_Modifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_CONModifier"></td>
     <td><input type="number" class="sheet-Attribute" name="attr_CONSave"></td>
     <td><button type='roll' value='/roll 1d20 + @{CONSave}' name='roll_CONSave'></button></td>
     <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
@@ -156,7 +189,7 @@ table, th, td {
   <tr>
     <td>Intelligence</td>
     <td><input type="number" class="sheet-Attribute" name="attr_Intelligence"></td> 
-    <td><input type="number" class="sheet-Attribute" name="attr_Modifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_INTModifier"></td>
     <td><input type="number" class="sheet-Attribute" name="attr_INTSave"></td>
     <td><button type='roll' value='/roll 1d20 + @{INTSave}' name='roll_INTSave'></button></td>
     <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
@@ -164,7 +197,7 @@ table, th, td {
   <tr>
     <td>Willpower</td>
     <td><input type="number" class="sheet-Attribute" name="attr_Willpower"></td> 
-    <td><input type="number" class="sheet-Attribute" name="attr_Modifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_WILModifier"></td>
     <td><input type="number" class="sheet-Attribute" name="attr_WILSave"></td>
     <td><button type='roll' value='/roll 1d20 + @{WILSave}' name='roll_WILSave'></button></td>
     <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
@@ -172,7 +205,7 @@ table, th, td {
   <tr>
     <td>Charisma</td>
     <td><input type="number" class="sheet-Attribute" name="attr_Charisma"></td> 
-    <td><input type="number" class="sheet-Attribute" name="attr_Modifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_CHAModifier"></td>
     <td><input type="number" class="sheet-Attribute" name="attr_CHASave"></td>
     <td><button type='roll' value='/roll 1d20 + @{CHASave}' name='roll_CHASave'></button></td>
     <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
@@ -180,7 +213,7 @@ table, th, td {
   <tr>
     <td>Perception</td>
     <td><input type="number" class="sheet-Attribute" name="attr_Perception"></td> 
-    <td><input type="number" class="sheet-Attribute" name="attr_Modifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_PERModifier"></td>
     <td><input type="number" class="sheet-Attribute" name="attr_PERSave"></td>
     <td><button type='roll' value='/roll 1d20 + @{PERSave}' name='roll_PERSave'></button></td>
     <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
@@ -196,7 +229,7 @@ table, th, td {
     <br>  
   
  <fieldset class="repeating_skills">
-     
+     <label>Skill</label>
 	   <select name="attr_skillname" class="skillname">                
           <option value="Analyze Mixture">Analyze Mixture</option>
 		      <option value="Ancient Lore">Ancient Lore</option>
@@ -267,6 +300,7 @@ table, th, td {
           <option value=""></option>
       
      </select>
+     <label>Score</label>
      <input type="number" name="attr_skillscore" /> 
      <select name="attr_skilltype" class="skilltype">                
           <option value="Arts and Sciences">Arts and Sciences</option>
@@ -277,8 +311,8 @@ table, th, td {
           <option value="Class">Class</option>
        
       </select>
-      <input type="number" name="attr_increaseperlevel" /> 
-      <input type="text" name="attr_notes" />
+   <label>Increase/lvl</label>   
+   <input type="number" name="attr_increaseperlevel" /> 
       <input type="checkbox" class="sheet-toggle" title="show/hide" name="attr_move-show" value="1" />
 			<textarea name="attr_descriptionbody" class="sheet-hide" placeholder="Skill Description"></textarea> 
  </fieldset>
@@ -293,12 +327,17 @@ table, th, td {
 
     
   <fieldset class="repeating_spells">
-       <input type="text" name="attr_spellname" placeholder="Spell"/>
-       <input type="number" name="attr_levelname"placeholder="level" />
-       <input type="text" name="attr_range" placeholder="range"/>
-       <input type="text" name="attr_duration" placeholder="duration"/>
+    <label>Spell</label>  
+    <input type="text" name="attr_spellname" placeholder="Spell"/>
+    <label>Level</label>   
+    <input type="number" name="attr_levelname"placeholder="level" />
+    <label>Range</label>   
+    <input type="text" name="attr_range" placeholder="range"/>
+    <label>Duration</label>   
+    <input type="text" name="attr_duration" placeholder="duration"/>
   </select>
-     <select spellsavename="attr_spellsave" class="spellsave">                
+    <label>Save</label> 
+    <select spellsavename="attr_spellsave" class="spellsave">                
           <option value="NONE">NONE</option>
           <option value="WIL">DEX</option>
           <option value="NONE">NONE</option>
