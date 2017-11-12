@@ -1,0 +1,194 @@
+.charsheet {
+	width: 830px;
+	background: white;
+}
+
+textarea {
+	resize: none;
+	height: auto;
+	width: 97%;
+}
+
+textarea, 
+input { 
+	outline: none;
+	box-shadow: none;
+	margin-bottom: 1px;
+}
+
+.sheet-header textarea, 
+.sheet-header input {
+	border: none;
+}
+
+input[type="number"], 
+input[type="text"] {
+	width: 50%;
+}
+
+select {
+	width: auto;
+	margin: 0;
+}
+
+input[type=number]:disabled::-webkit-inner-spin-button, 
+input[type=number]:disabled::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[disabled] {-moz-appearance: textfield}
+
+.repcontainer .btn,
+.repcontrol .btn {
+    border-radius: 0;
+    background-image: none;
+    border: solid;
+}
+
+
+/* ===== LAYOUT ===== */
+.sheet-col-left {
+	float: left;
+	width: 50%;
+}
+
+.sheet-col-right {
+	float: right;
+	width: 50%;
+}
+
+
+/* ===== TOGGLE ===== */
+.sheet-toggle:not(:checked) ~ .sheet-hide,
+.sheet-toggle:checked ~ .sheet-show {
+	display: none;
+}
+
+/* ===== SECTION HEADERS ===== */
+.sheet-header {
+	background-color: #000;
+	color: #fff;
+	padding: 2px 0px;
+	vertical-align: middle;
+	line-height: 100%;
+	height: 32px;
+	line-height: 32px;
+	font-size: 1.1em;
+	margin: 3px 0px;
+	box-align: center;
+	border-radius: 4px;
+	padding: 2px 2px 2px 8px;
+}
+
+.sheet-header input {
+	height: 28px;
+
+	border: none;
+	vertical-align: left;
+	font-weight: bold;
+
+	font-size: 18px;
+	line-height: 18px;
+	margin: 2px;
+}
+
+.sheet-header input[type="text"] {
+	width: 8.0em;
+  border-style: solid;
+}
+
+.sheet-header input[type="number"] {
+	width: 2.0em;
+  border-style: solid;
+  
+}
+
+.sheet-header input[type="number"]:disabled {
+	width: 2em;
+}
+  
+}
+.sheet-header button[type="roll"] {
+	height: 28px;
+	width: 28px;
+	margin: 2px;
+	padding: 4px;
+	padding-top: 5px;
+
+	font-size: 20px;
+	text-align: center;
+
+	background: white;
+	border: none;
+	border-radius: 3px;
+}
+
+.sheet-header > * {
+	text-align: left;
+	float: ;
+	height: 100%;
+  
+}
+
+.sheet-header .sheet_primaryinfo {
+  margin-right: 2px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.sheet-header .sheet_secondaryinfo {
+  margin-right: 2px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sheet-header .repeating_skills {
+  margin-right: 2px;
+  font-weight: bold;
+  text-align: left
+}
+
+.sheet-header .repeating_spells {
+  margin-right: 2px;
+  font-weight: bold;
+  text-align: left
+}
+
+.sheet-header .repeating_weaponproficiencies {
+  margin-right: 2px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.sheet-header .repeating_armor {
+  margin-right: 2px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.sheet-header .repeating_gear {
+  margin-right: 2px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.sheet-header .repeating_magicitem {
+  margin-right: 2px;
+  font-weight: bold;
+  text-align: left;
+}
+
+label {
+  margin-right: 9px;
+  margin-left: 9px;
+  color:black;
+  text-align: left;
+  font-weight: bold;
+}
+
+
+
+
+
+
