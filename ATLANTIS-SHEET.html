@@ -1,5 +1,4 @@
 
-
 <div class="sheet-col-right">
   
   <div class="sheet-header">
@@ -173,6 +172,7 @@ th, td {
     background-color: #ffffff;
     color: black;
 }
+      
  </style>
  </head>
  <body>
@@ -201,7 +201,7 @@ th, td {
     <td><input type="number" class="sheet-Attribute" name="attr_Speed"></td> 
     <td><input type="number" class="sheet-Attribute" name="attr_SPDModifier"></td>
     <td><input type="number" class="sheet-Attribute" name="attr_SPDSave"></td>
-    <td><button type='roll' value='/roll 1d20 + @{SPDSave}' name='roll_SPDSave'></button></td>
+    <td><button type='roll' value='/roll 1d20 + [[@{SPDSave}+@{SPDModifier}]]' name='roll_SPDSave'></button></td>
     <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
   </tr>
   <tr>
@@ -361,16 +361,22 @@ th, td {
 
     
   <fieldset class="repeating_spells">
-    <label>Spell</label>  
+      
     <input type="text" name="attr_spellname" />
+    <label>Spell</label>
     <label>Level</label>   
     <input type="number" name="attr_levelname" />
-    <label>Range</label>   
+    
+    
+    <label>Range</label>
     <input type="text" name="attr_range" />
-    <label>Duration</label>   
+    
+       
     <input type="text" name="attr_duration" />
+    <label>Duration</label>
+    
   </select>
-    <label>Save</label> 
+     <label>Save</label>
     <select spellsavename="attr_spellsave" class="spellsave">                
           <option value="NONE">NONE</option>
           <option value="WIL">DEX</option>       
@@ -378,7 +384,9 @@ th, td {
           <option value="SPECIAL">SPECIAL</option>
           <option value="INT">INT</option>
           <option value="STR">STR</option>
-          <option value=""></option>       
+          <option value=""></option>
+      
+      
       </select>
 
               <input type="checkbox" class="sheet-toggle" title="show/hide" name="attr_move-show" value="1" />
@@ -390,5 +398,4 @@ th, td {
 </div>
     
     
- <br>    
-    
+ <br>   
