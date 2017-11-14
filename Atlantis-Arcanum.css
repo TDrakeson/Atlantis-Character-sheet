@@ -1,194 +1,395 @@
-.charsheet {
-	width: 830px;
-	background: white;
-}
 
-textarea {
-	resize: none;
-	height: auto;
-	width: 97%;
-}
-
-textarea, 
-input { 
-	outline: none;
-	box-shadow: none;
-	margin-bottom: 1px;
-}
-
-.sheet-header textarea, 
-.sheet-header input {
-	border: none;
-}
-
-input[type="number"], 
-input[type="text"] {
-	width: 50%;
-}
-
-select {
-	width: auto;
-	margin: 0;
-}
-
-input[type=number]:disabled::-webkit-inner-spin-button, 
-input[type=number]:disabled::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}
-
-input[disabled] {-moz-appearance: textfield}
-
-.repcontainer .btn,
-.repcontrol .btn {
-    border-radius: 0;
-    background-image: none;
-    border: solid;
-}
-
-
-/* ===== LAYOUT ===== */
-.sheet-col-left {
-	float: left;
-	width: 50%;
-}
-
-.sheet-col-right {
-	float: right;
-	width: 50%;
-}
-
-
-/* ===== TOGGLE ===== */
-.sheet-toggle:not(:checked) ~ .sheet-hide,
-.sheet-toggle:checked ~ .sheet-show {
-	display: none;
-}
-
-/* ===== SECTION HEADERS ===== */
-.sheet-header {
-	background-color: #000;
-	color: #fff;
-	padding: 2px 0px;
-	vertical-align: middle;
-	line-height: 100%;
-	height: 32px;
-	line-height: 32px;
-	font-size: 1.1em;
-	margin: 3px 0px;
-	box-align: center;
-	border-radius: 4px;
-	padding: 2px 2px 2px 8px;
-}
-
-.sheet-header input {
-	height: 28px;
-
-	border: none;
-	vertical-align: left;
-	font-weight: bold;
-
-	font-size: 18px;
-	line-height: 18px;
-	margin: 2px;
-}
-
-.sheet-header input[type="text"] {
-	width: 8.0em;
-  border-style: solid;
-}
-
-.sheet-header input[type="number"] {
-	width: 2.0em;
-  border-style: solid;
+<div class="sheet-col-right">
   
-}
-
-.sheet-header input[type="number"]:disabled {
-	width: 2em;
-}
+  <div class="sheet-header">
+		<div class="section-name">COMBAT</div>
+        <br>
+    <label>Total to hit bonus</label>
+    <input type="number" name="attr_tohitbonus" />
+    <label>Total damage bonus</label> 
+    <input type="number" name="attr_dmgbonus" />
+    <label>Number of attacks</label>  
+    <input type="number" name="attr_numberattacks" />
   
-}
-.sheet-header button[type="roll"] {
-	height: 28px;
-	width: 28px;
-	margin: 2px;
-	padding: 4px;
-	padding-top: 5px;
+    <div class="sheet-header">
+      <div class="section-name">WEAPON PROFICIENCIES</div>
+    </div>
+        
+      <fieldset class="repeating_weaponproficiencies">
+        <label>Weapon</label>
+        <input type="text" name="attr_weaponprof"  />
+        <label>Damage</label>
+        <input type="text" name="weapondamage" />
+        <label>Notes</label>
+        <input type="text" name="Notes"  />
+    </fieldset>
+    
+    <div class="sheet-header">
+    <div class="section-name">ARMOR</div>
+      </div>
+       
+    <fieldset class="repeating_armor">
+      <label>Armor</label> 
+      <input type="text" name="attr_armor" />
+      <label>Protection Value</label> 
+      <input type="number" name="attr_protectivevalue" />
+      <label>Weight</label> 
+      <input type="number" name="attr_weight"  />
+  </fieldset>
+    
+     <div class="sheet-header">  
+    
+       <div class="section-name">GEAR</div>
+        </div>
+    <fieldset class="repeating_gear">
+      <label>Gear</label>
+      <input type="text" name="attr_gear" 
+             />
+      <label>Weight</label>
+      <input type="number" name="attr_weight" />
+   </fieldset>
+    
+     <div class="sheet-header">  
+     <div class="section-name">MAGIC ITEMS</div>
+        </div>
+    
+    <fieldset class="repeating_magicitem">
+      <label>Magic Item</label>
+      <input type="text" name="attr_magicitem" />
+      <label>Weight</label>
+      <input type="number" name="attr_weight" />
+   </fieldset>
+    
 
-	font-size: 20px;
-	text-align: center;
+    </div>
+ </div>
 
-	background: white;
-	border: none;
-	border-radius: 3px;
-}
+<div class="sheet-col-left">
 
-.sheet-header > * {
-	text-align: left;
-	float: ;
-	height: 100%;
+	<!-- ===== Primary Info ===== -->
+	<div class="sheet-header">
+		<div class="section-name">PRIMARY INFO</div>
+	<div>
+    <br>
+    
+    <div class="sheet_primaryinfo">
+		    <input type="text" name="attr_charactername" > 
+        <label>Name<label/>
+    </div>  
+    </div>
+      <div class="sheet_primaryinfo_col_right">
+          <label>Level<label/>
+            <input type="text" name="attr_level" >
+
+    <div/>
+  </div>
+
+        <div class="sheet_primaryinfo">  	
+          <input type="text" name="attr_race" >
+            <label>Race</label>	
+        </div> 
+    </div>    
+        <div class="sheet_primaryinfo_col_right">
+          <label>Profession</label>
+            <input type="text" name="attr_profession"> 
+		<div/>
+  </div>  
+     
+  <br>
+
+
+ <!-- ===== Secondary Info ===== -->
+	<div class="sheet-header">
+		<div class="section-name">SECONDARY INFO</div>
+	<div>
+    
+    <br>
+    
+	<div class="sheet_secondaryinfo">
+    <input type="text" name="attr_XP">
+      <label>XP</label>
+    </div>  
+  </div>
+    
+    <div class="sheet_secondaryinfo_colright">
+      <label>XP Pool</label>
+        <input type="text" name="attr_XP Pool" >
+
+    <div/>
+  </div>
+   
+   <div class="sheet_secondaryinfo">		
+      <input type="text" name="attr_Combat Training" >
+        <label>Combat Training</label> 
+     </div>  
+    </div>
+     
+   <div class="sheet_secondaryinfo_colright">    
+    <label>Alignment</label>
+      <input type="text" name="attr_Alignment" >
+    <div/>
+  </div>		
+
+    <div class="sheet_secondaryinfo"> 
+      <input type="text" name="attr_Birthplace" >	
+        <label>Birthplace</label> 
+    </div>  
+  </div>
+
+      <div class="sheet_secondaryinfo_colright">
+        <label>Background</label>
+          <input type="text" name="attr_Background" >
+
+     <div class="sheet_secondaryinfo">
+        <input type="text" name="attr_Racial or Special ablilities" >
+          <label>Racial/Special Abilities</label>
+       
+       </div>  
+    </div>
+    
+     <div class="sheet_secondaryinfo_colright">  
+        <label>Renown</label>
+          <input type="text" name="attr_Renown" >
+		<div/>
+  </div>  
+     
+  <br>
+
+ <!-- ===== ATTRIBUTES ===== -->  
+  <div class="sheet-header">
+		<div class=section-name>ATTRIBUTES</div>
+	</div>
   
+ <style>
+   
+table, th, td {
+    border: 2px solid black;
+    font-weight: bold;
+    text-align: center;
+   }
+   
+th, td {
+    background-color: #ffffff;
+    color: black;
 }
+ </style>
+ </head>
+ <body>
+   
+  
+                                                         
+ <table style="width:100%">
+  <tr>
+    <th>Attribute</th>
+    <th>Score</th> 
+    <th>Modifier</th>
+    <th>Save</th>
+    <th>Save Roll</th>
+    <th>Bonus</th>
+  </tr>
+  <tr>
+    <td>Strength</td>
+    <td><input type="number" class="sheet-Attribute" name="attr_Strength" ></td> 
+    <td><input type="number" class="sheet-Attribute" name="STRModifier" ></td>
+    <td><input type="number" class="sheet-Attribute" name="STRSave" ></td>
+    <td><button type='roll' value='/roll 1d20 + @{STRSave}' name='roll_STRSave'></button></td>
+    <td><input type="text" class="sheet-Attribute" name="attr_Bonus" </td>
+  </tr>
+  <tr>
+    <td>Speed</td>
+    <td><input type="number" class="sheet-Attribute" name="attr_Speed"></td> 
+    <td><input type="number" class="sheet-Attribute" name="attr_SPDModifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_SPDSave"></td>
+    <td><button type='roll' value='/roll 1d20 + @{SPDSave}' name='roll_SPDSave'></button></td>
+    <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
+  </tr>
+  <tr>
+    <td>Dexterity</td>
+    <td><input type="number" class="sheet-Attribute" name="attr_Dexterity"></td> 
+    <td><input type="number" class="sheet-Attribute" name="attr_DEXModifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_DEXSave"></td>
+    <td><button type='roll' value='/roll 1d20 + @{DEXSave}' name='roll_DEXSave'></button></td>
+    <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
+  </tr>
+  <tr>
+    <td>Constitution</td>
+    <td><input type="number" class="sheet-Attribute" name="attr_Constitution"></td> 
+    <td><input type="number" class="sheet-Attribute" name="attr_CONModifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_CONSave"></td>
+    <td><button type='roll' value='/roll 1d20 + @{CONSave}' name='roll_CONSave'></button></td>
+    <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
+  </tr>
+  <tr>
+    <td>Intelligence</td>
+    <td><input type="number" class="sheet-Attribute" name="attr_Intelligence"></td> 
+    <td><input type="number" class="sheet-Attribute" name="attr_INTModifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_INTSave"></td>
+    <td><button type='roll' value='/roll 1d20 + @{INTSave}' name='roll_INTSave'></button></td>
+    <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
+  </tr>
+  <tr>
+    <td>Willpower</td>
+    <td><input type="number" class="sheet-Attribute" name="attr_Willpower"></td> 
+    <td><input type="number" class="sheet-Attribute" name="attr_WILModifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_WILSave"></td>
+    <td><button type='roll' value='/roll 1d20 + @{WILSave}' name='roll_WILSave'></button></td>
+    <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
+  </tr>
+  <tr>
+    <td>Charisma</td>
+    <td><input type="number" class="sheet-Attribute" name="attr_Charisma"></td> 
+    <td><input type="number" class="sheet-Attribute" name="attr_CHAModifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_CHASave"></td>
+    <td><button type='roll' value='/roll 1d20 + @{CHASave}' name='roll_CHASave'></button></td>
+    <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
+  </tr>
+  <tr>
+    <td>Perception</td>
+    <td><input type="number" class="sheet-Attribute" name="attr_Perception"></td> 
+    <td><input type="number" class="sheet-Attribute" name="attr_PERModifier"></td>
+    <td><input type="number" class="sheet-Attribute" name="attr_PERSave"></td>
+    <td><button type='roll' value='/roll 1d20 + @{PERSave}' name='roll_PERSave'></button></td>
+    <td><input type="text" class="sheet-Attribute" name="attr_Bonus"></td>
+  </tr>
+ </table>
+  
+  <br>
+  
+ <!-- ===== Skills ===== -->
+	<div class="sheet-header">
+		<div class="section-name">SKILLS</div>
+	<div>
+    <br>  
+  
+ <fieldset class="repeating_skills">
+     <label>Skill</label>
+	   <select name="attr_skillname" class="skillname">                
+          <option value="Analyze Mixture">Analyze Mixture</option>
+		      <option value="Ancient Lore">Ancient Lore</option>
+          <option value="Art">Art</option>
+          <option value="Cartography">Cartography</option>
+          <option value="Chirrography">Chirography</option>
+          <option value="Diplomacy">Diplomacy</option>
+          <option value="Healing Arts">Healing Arts</option>
+          <option value="Horticulture">Horticulture</option>
+          <option value="Internal Alchemy">Internal Alchemy</option>
+          <option value="Inventing">Inventing</option>
+          <option value="Linguistics">Linguistics</option>
+          <option value="Music">Music</option>
+          <option value="Navigation">Navigation</option>
+          <option value="Naturalism">Naturalism</option>
+          <option value="Read Magic">Read Magic</option>
+          <option value="Theology">Theology</option>
+          <option value="AppraiseTreasure">AppraiseTreasure</option>
+          <option value="Catwalk">Catwalk</option>
+          <option value="Con">Con</option>
+          <option value="Decipher">Decipher</option>
+          <option value="Detect Set Disarm Traps">Detect Set Disarm Traps</option>
+          <option value="Evade Pursuit">Evade Pursuit</option>
+          <option value="Forgery">Forgery</option>
+          <option value="Hide">Hide</option>
+          <option value="Infiltrate">Infiltrate</option>
+          <option value="Interrogate">Interrogate</option>
+          <option value="Lipreading">Lipreading</option>
+          <option value="Pick Pockets">Pick Pockets</option>
+          <option value="Scale Walls">Scale Walls</option>
+          <option value="Stealth">Stealth</option>
+          <option value="Tailing">Tailing</option>
+          <option value="Thieves' Cant">Thieves' Cant</option>
+          <option value="Camoflague-Ambush">Camoflague-Ambush</option>
+          <option value="Detect Disarm Set Snares ">Detect Disarm Set Snares</option>
+          <option value="Herb Lore">Herb Lore</option>
+          <option value="Hunting-Fishing-Trapping">Hunting-Fishing-Trapping</option>
+          <option value="Mountain Climbing">Mountain Climbing</option>
+          <option value="Read Tracks">Read tracks</option>
+          <option value="Stalking">Stalking</option>
+          <option value="tracking">Tracking</option>
+          <option value="Woodcraft">Woodcraft</option>
+          <option value="Acrobatics 1">Acrobatics 1</option>
+          <option value="Acrobatics 2">Acrobatics 2</option>
+          <option value="Tightrope Walking">Tightrope Walking</option>
+          <option value="Team Acrobatics">Team Acrobatics</option>
+          <option value="Acting">Acting</option>
+          <option value="Animal Training">Animal Training</option>
+          <option value="Juggling">Juggling</option>
+          <option value="Knife Throwing">Knife Throwing</option>
+          <option value="Legermain">Legermain</option>
+          <option value="Oratory">Oratory</option>
+          <option value="Sideshow Talents">Sideshow Talents</option>
+          <option value="Archery 1">Archery 1</option>
+          <option value="Archery 2">Archery 2</option>
+          <option value="Boxing">Boxing</option>
+          <option value="Command">Command</option>
+          <option value="Martial Arts 1">Martial Arts 1</option>
+          <option value="Martial Arts 2">Martial Arts 2</option>
+          <option value="Mounted Combat 1">Mounted Combat 1</option>
+          <option value="Mounted Combat" 2>Mounted Combat 2</option>
+          <option value="Siege Weapons">Siege Weapons</option>
+          <option value="Street Fighting">Street Fighting</option>
+          <option value="Weapon Specialization">Weapon Specialization</option>
+          <option value="Weapon Training">Weapon Training</option>
+          <option value="Wrestling">Wrestling</option>
+          <option value="Zen Archery">Zen Archery</option>
+          <option value=""></option>
+      
+     </select>
+     <label>Score</label>
+     <input type="number" name="attr_skillscore" /> 
+     <select name="attr_skilltype" class="skilltype">                
+          <option value="Arts and Sciences">Arts and Sciences</option>
+          <option value="Background">Background</option>
+          <option value="Combat">Combat</option>
+          <option value="Performing">Performing</option>       
+          <option value="Thieving">Thieving</option>
+          <option value="Class">Class</option>
+       
+      </select>
+   <label>Increase/lvl</label>   
+   <input type="number" name="attr_increaseperlevel" /> 
+      <input type="checkbox" class="sheet-toggle" title="show/hide" name="attr_move-show" value="1" />
+			<textarea name="attr_descriptionbody" class="sheet-hide" placeholder="Skill Description"></textarea> 
+ </fieldset>
+    
+    
+    <br>
+ <!-- ===== Spells ===== -->
+	<div class="sheet-header">
+		<div class="section-name">SPELLS</div>
+	<div>
+    <br>   
 
-.sheet-header .sheet_primaryinfo {
-  margin-right: 2px;
-  font-weight: bold;
-  text-align: left;
-}
+    
+  <fieldset class="repeating_spells">
+    <label>Spell</label>  
+    <input type="text" name="attr_spellname" />
+    <label>Level</label>   
+    <input type="number" name="attr_levelname" />
+    <label>Range</label>   
+    <input type="text" name="attr_range" />
+    <label>Duration</label>   
+    <input type="text" name="attr_duration" />
+  </select>
+    <label>Save</label> 
+    <select spellsavename="attr_spellsave" class="spellsave">                
+          <option value="NONE">NONE</option>
+          <option value="WIL">DEX</option>       
+          <option value="CON">CON</option>       
+          <option value="SPECIAL">SPECIAL</option>
+          <option value="INT">INT</option>
+          <option value="STR">STR</option>
+          <option value=""></option>       
+      </select>
 
-.sheet-header .sheet_secondaryinfo {
-  margin-right: 2px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.sheet-header .repeating_skills {
-  margin-right: 2px;
-  font-weight: bold;
-  text-align: left
-}
-
-.sheet-header .repeating_spells {
-  margin-right: 2px;
-  font-weight: bold;
-  text-align: left
-}
-
-.sheet-header .repeating_weaponproficiencies {
-  margin-right: 2px;
-  font-weight: bold;
-  text-align: left;
-}
-
-.sheet-header .repeating_armor {
-  margin-right: 2px;
-  font-weight: bold;
-  text-align: left;
-}
-
-.sheet-header .repeating_gear {
-  margin-right: 2px;
-  font-weight: bold;
-  text-align: left;
-}
-
-.sheet-header .repeating_magicitem {
-  margin-right: 2px;
-  font-weight: bold;
-  text-align: left;
-}
-
-label {
-  margin-right: 9px;
-  margin-left: 9px;
-  color:black;
-  text-align: left;
-  font-weight: bold;
-}
-
-
-
+              <input type="checkbox" class="sheet-toggle" title="show/hide" name="attr_move-show" value="1" />
+			 <textarea name="attr_spelldescriptionbody" class="sheet-hide" placeholder="Spell Description"></textarea>
+    
+ </fieldset>
+    
+    </div>
+</div>
+    
+    
+ <br>   
 
 
 
