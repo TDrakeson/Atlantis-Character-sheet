@@ -1,8 +1,10 @@
 
+
 <div class="sheet-col-right">
   
   <div class="sheet-header">
 		<div class="section-name">COMBAT</div>
+        <br>
     <label>Total to hit bonus</label>
     <input type="number" name="attr_tohitbonus" />
     <label>Total damage bonus</label> 
@@ -33,7 +35,7 @@
       <label>Protection Value</label> 
       <input type="number" name="attr_protectivevalue" />
       <label>Weight</label> 
-      <input type="number" name="attr_weight" placeholder= />
+      <input type="number" name="attr_weight"  />
   </fieldset>
     
      <div class="sheet-header">  
@@ -45,18 +47,18 @@
       <input type="text" name="attr_gear" 
              />
       <label>Weight</label>
-      <input type="number" name="attr_weight" placeholder= "Weight"/>
+      <input type="number" name="attr_weight" />
    </fieldset>
     
      <div class="sheet-header">  
-     <div class="section-name">Magic Items</div>
+     <div class="section-name">MAGIC ITEMS</div>
         </div>
     
     <fieldset class="repeating_magicitem">
       <label>Magic Item</label>
       <input type="text" name="attr_magicitem" />
       <label>Weight</label>
-      <input type="number" name="attr_weight" placeholder= "Weight"/>
+      <input type="number" name="attr_weight" />
    </fieldset>
     
 
@@ -72,19 +74,28 @@
     <br>
     
     <div class="sheet_primaryinfo">
-        <label>NAME<label/>
 		    <input type="text" name="attr_charactername" > 
-        <label>LEVEL<label/>
-        <input type="text" name="attr_level" >
+        <label>Name<label/>
+    </div>  
+    </div>
+      <div class="sheet_primaryinfo_col_right">
+          <label>Level<label/>
+            <input type="text" name="attr_level" >
+
     <div/>
   </div>
-          <label>Race</label>		
+
+        <div class="sheet_primaryinfo">  	
           <input type="text" name="attr_race" >
+            <label>Race</label>	
+        </div> 
+    </div>    
+        <div class="sheet_primaryinfo_col_right">
           <label>Profession</label>
-          <input type="text" name="attr_profession" >
-		
+            <input type="text" name="attr_profession"> 
+		<div/>
   </div>  
- 
+     
   <br>
 
 
@@ -92,36 +103,59 @@
 	<div class="sheet-header">
 		<div class="section-name">SECONDARY INFO</div>
 	<div>
+    
     <br>
+    
 	<div class="sheet_secondaryinfo">
-    <label>XP</label>
-		<input type="number" name="attr_XP">
-		<label>XP Pool</label>
-    <input type="number" name="attr_XP Pool" >
-		<label>Combat Training</label>
-    <input type="text" name="attr_Combat Training" >
-    </div>
-  <div>		
-    <label>Alignment</label>
-    <input type="text" name="attr_Alignment" >
-		<label>Birthplace</label>
-    <input type="text" name="attr_Birthplace" >	
-    </div>
-   <div>		
-    <label>Background</label>
-    <input type="text" name="attr_Background" >
-		<label>Racial/Special Abilities</label>
-    <input type="text" name="attr_Racial or Special ablilities" >
-	 </div>
-  <div>
-    <label>Renown</label>
-    <input type="number" name="attr_Renown" >
-		<div>
-  <div>
+    <input type="text" name="attr_XP">
+      <label>XP</label>
+    </div>  
+  </div>
+    
+    <div class="sheet_secondaryinfo_colright">
+      <label>XP Pool</label>
+        <input type="text" name="attr_XP Pool" >
 
+    <div/>
+  </div>
+   
+   <div class="sheet_secondaryinfo">		
+      <input type="text" name="attr_Combat Training" >
+        <label>Combat Training</label> 
+     </div>  
+    </div>
+     
+   <div class="sheet_secondaryinfo_colright">    
+    <label>Alignment</label>
+      <input type="text" name="attr_Alignment" >
+    <div/>
+  </div>		
+
+    <div class="sheet_secondaryinfo"> 
+      <input type="text" name="attr_Birthplace" >	
+        <label>Birthplace</label> 
+    </div>  
+  </div>
+
+      <div class="sheet_secondaryinfo_colright">
+        <label>Background</label>
+          <input type="text" name="attr_Background" >
+
+     <div class="sheet_secondaryinfo">
+        <input type="text" name="attr_Racial or Special ablilities" >
+          <label>Racial/Special Abilities</label>
+       
+       </div>  
+    </div>
+    
+     <div class="sheet_secondaryinfo_colright">  
+        <label>Renown</label>
+          <input type="text" name="attr_Renown" >
+		<div/>
+  </div>  
+     
   <br>
 
-  
  <!-- ===== ATTRIBUTES ===== -->  
   <div class="sheet-header">
 		<div class=section-name>ATTRIBUTES</div>
@@ -132,20 +166,20 @@
 table, th, td {
     border: 2px solid black;
     font-weight: bold;
+    text-align: center;
    }
    
 th, td {
     background-color: #ffffff;
     color: black;
 }
-
  </style>
  </head>
  <body>
    
   
                                                          
- <table style="width:50%">
+ <table style="width:100%">
   <tr>
     <th>Attribute</th>
     <th>Score</th> 
@@ -321,35 +355,33 @@ th, td {
     <br>
  <!-- ===== Spells ===== -->
 	<div class="sheet-header">
-		<div class="section-name">Spells</div>
+		<div class="section-name">SPELLS</div>
 	<div>
     <br>   
 
     
   <fieldset class="repeating_spells">
     <label>Spell</label>  
-    <input type="text" name="attr_spellname" placeholder="Spell"/>
+    <input type="text" name="attr_spellname" />
     <label>Level</label>   
-    <input type="number" name="attr_levelname"placeholder="level" />
+    <input type="number" name="attr_levelname" />
     <label>Range</label>   
-    <input type="text" name="attr_range" placeholder="range"/>
+    <input type="text" name="attr_range" />
     <label>Duration</label>   
-    <input type="text" name="attr_duration" placeholder="duration"/>
+    <input type="text" name="attr_duration" />
   </select>
     <label>Save</label> 
     <select spellsavename="attr_spellsave" class="spellsave">                
           <option value="NONE">NONE</option>
-          <option value="WIL">DEX</option>
-          <option value="NONE">NONE</option>
+          <option value="WIL">DEX</option>       
           <option value="CON">CON</option>       
           <option value="SPECIAL">SPECIAL</option>
           <option value="INT">INT</option>
           <option value="STR">STR</option>
           <option value=""></option>       
       </select>
-    
-       <input type="text" name="attr_notes"placeholder="Notes" />
-       <input type="checkbox" class="sheet-toggle" title="show/hide" name="attr_move-show" value="1" />
+
+              <input type="checkbox" class="sheet-toggle" title="show/hide" name="attr_move-show" value="1" />
 			 <textarea name="attr_spelldescriptionbody" class="sheet-hide" placeholder="Spell Description"></textarea>
     
  </fieldset>
@@ -358,5 +390,5 @@ th, td {
 </div>
     
     
- <br>   
+ <br>    
     
